@@ -3,6 +3,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, Navigation, Clock, Zap, Shield, AlertTriangle } from 'lucide-react';
+import { GoogleMap } from './GoogleMap';
 
 interface Bus {
   id: string;
@@ -116,21 +117,12 @@ export const BusMap = () => {
       </div>
 
       {/* Map Container */}
-      <div className="absolute inset-0 bg-gradient-to-br from-muted to-background">
-        <div className="flex items-center justify-center h-full">
-          <Card className="bg-card/80 backdrop-blur-sm p-8 shadow-floating">
-            <div className="text-center">
-              <MapPin className="h-16 w-16 mx-auto mb-4 text-transit-primary" />
-              <h3 className="text-xl font-semibold mb-2">Interactive Map</h3>
-              <p className="text-muted-foreground mb-4">
-                Google Maps integration would display here with live bus tracking
-              </p>
-              <div className="text-sm text-muted-foreground">
-                Real map requires Google Maps API key
-              </div>
-            </div>
-          </Card>
-        </div>
+      <div className="absolute inset-0">
+        <GoogleMap 
+          buses={buses}
+          center={{ lat: 40.7128, lng: -74.0060 }}
+          zoom={13}
+        />
       </div>
 
       {/* Live Bus List */}
