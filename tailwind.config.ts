@@ -52,6 +52,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				transit: {
+					primary: 'hsl(var(--transit-primary))',
+					secondary: 'hsl(var(--transit-secondary))',
+					accent: 'hsl(var(--transit-accent))',
+					warning: 'hsl(var(--transit-warning))',
+					danger: 'hsl(var(--transit-danger))',
+					success: 'hsl(var(--transit-success))'
+				},
+				privacy: {
+					shield: 'hsl(var(--privacy-shield))',
+					secure: 'hsl(var(--privacy-secure))',
+					warning: 'hsl(var(--privacy-warning))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +80,21 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-secondary': 'var(--gradient-secondary)',
+				'gradient-privacy': 'var(--gradient-privacy)',
+				'gradient-glass': 'var(--gradient-glass)'
+			},
+			boxShadow: {
+				'glass': 'var(--shadow-glass)',
+				'card': 'var(--shadow-card)',
+				'floating': 'var(--shadow-floating)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)'
 			},
 			keyframes: {
 				'accordion-down': {
